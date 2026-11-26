@@ -1,0 +1,41 @@
+! Switch: Cisco 2960
+! Hostname: SW1
+! G0/1 connects to R1 G0/0
+! G0/2 connects to SW2 G0/1
+! Management IP: 192.168.10.2/24
+
+enable
+configure terminal
+hostname SW1
+
+interface vlan 1
+ ip address 192.168.10.2 255.255.255.0
+ no shutdown
+exit
+
+ip default-gateway 192.168.10.1
+
+interface GigabitEthernet0/1
+ description UPLINK_TO_R1
+ switchport mode access
+ no shutdown
+exit
+
+interface GigabitEthernet0/2
+ description UPLINK_TO_SW2
+ switchport mode access
+ no shutdown
+exit
+
+end
+copy running-config startup-config
+
+! Verification:
+show ip interface brief
+show vlan brief
+show mac address-table
+ping 192.168.10.1
+ping 192.168.10.3
+
+! Note: End-device ports remain in the default access VLAN (VLAN 1).
+! Check the .pkt file for the exact ports used by PCs and the server.
