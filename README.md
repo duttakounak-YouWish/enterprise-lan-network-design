@@ -39,8 +39,7 @@ Configuration command references are provided in:
 - [switch1-configuration.txt](switch1-configuration.txt)
 - [switch2-configuration.txt](switch2-configuration.txt)
 
-These files document the intended final single-subnet design. Confirm interface assignments against the Packet Tracer file before applying commands. End-device access-port numbers are not specified because they depend on the actual cabling in the `.pkt` file.
-
+These files document the intended final single-subnet design.
 Verification
 Used the following checks in Packet Tracer:
 
@@ -76,4 +75,4 @@ enterprise-lan-network-design/
     ├── ping-tests.png
     └── mac-address-table.png
 ## Project Status
-The Packet Tracer simulation and screenshots are maintained separately in this repository. The configuration files are documentation of the intended final setup; validate them against the saved `.pkt` topology before treating them as an exact configuration export.
+The Packet Tracer simulation and screenshots are maintained separately in this repository. The configuration files are documentation of the intended final setup;
