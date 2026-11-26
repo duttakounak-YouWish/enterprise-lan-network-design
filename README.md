@@ -45,34 +45,10 @@ Used the following checks in Packet Tracer:
 
 1. Confirmed router `GigabitEthernet0/0` is up/up.
 2. Confirmed Switch 1 and Switch 2 management SVIs are up/up.
-3. From each PC, ping its default gateway (`192.168.10.1`).
-4. Ping between PCs on different switches.
-5. Ping the server (`192.168.10.100`) from a PC.
-6. On each switch, run `show mac address-table` and confirm learned MAC addresses.
+3. From PC, ping the default gateway (`192.168.10.1`).
+4. Ping the server (`192.168.10.100`) from a PC.
 
-Useful Cisco IOS commands:
+For this project, all devices are in the same `192.168.10.0/24` subnet and use the default access VLAN (VLAN 1).
 
-```text
-show ip interface brief
-show running-config
-show vlan brief
-show interfaces trunk
-show mac address-table
-```
-
-For this version of the project, all devices are in the same `192.168.10.0/24` subnet and use the default access VLAN (VLAN 1).
-## Repository Contents
-enterprise-lan-network-design/
-├── README.md
-├── topology.png
-├── enterprise-lan.pkt
-├── ip-addressing-table.md
-├── router-configuration.txt
-├── switch1-configuration.txt
-├── switch2-configuration.txt
-└── screenshots/
-    ├── router-status.png
-    ├── ping-tests.png
-    └── mac-address-table.png
 ## Project Status
 The Packet Tracer simulation and screenshots are maintained separately in this repository. The configuration files are documentation of the intended final setup;
